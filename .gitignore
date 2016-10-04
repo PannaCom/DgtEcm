@@ -1,3 +1,6 @@
 .idea/
 var/
 media/
+app/etc/modules/Opencommercellc_Commercebug.xml
+app/code/local/Opencommercellc/
+js/commercebug/
