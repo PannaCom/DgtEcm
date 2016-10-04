@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+   <default>
+        <!-- <reference name="root">
+        <reference name="top.links">
+            <action method="addLink" translate="label title">
+                <label>Compare</label>
+                <url>catalog/product_compare/index/</url>
+                <title>Compare</title>
+                <prepare/>
+                <urlParams/>
+                <position>10</position>
+            </action>
+        </reference>
+        </reference> -->
+    </default>
+    <cms_index_index>
+        <reference name="bestseller_slider">
+            <block type="bestseller/bestseller" name="bestseller.slider" template="themevast/bestseller/bestseller.phtml" />
+        </reference>
+    </cms_index_index>
+    <bestseller_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="left">
+             <block type="page/html" name="banner.left" before="-" template="themevast/banner_left.phtml"/>
+              <block type="page/html" name="banner.left2" after="banner.left" template="themevast/banner_left2.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="bestseller/product_list" name="bestseller_list" template="catalog/product/list.phtml">
+                <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                        <block type="page/html_pager" name="product_list_toolbar_pager"/>
+                </block>
+                <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+            </block>
+        </reference>
+    </bestseller_index_index>
+</layout> 
+

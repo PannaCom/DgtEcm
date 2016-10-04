@@ -1,0 +1,44 @@
+
+/* Extend - Css3 - Animation ==================================================*/ 
+
+.box-shadow {
+	@include box-shadow(0px 2px 5px -1px #dddddd);
+}
+.transition {
+	@include transition (all 0.5s ease );
+}
+.icon {
+	font-family: $font-ico;
+	content: "\e052";
+    font-size: 26px;
+}
+// .item-shadow {
+// 	@include box-shadow(0 5px 25px rgba(0,0,0,0.15));
+//     @include translate(0, -4px);
+// }
+.item-shadow-out {
+	@include box-shadow(none);
+    @include translate(0,0);
+}
+.border-radius {
+	@include border-radius (50px);
+}
+.controls-middle {
+	.owl-nav {
+      .owl-prev {
+        top: 50%;
+        right: auto;
+        left: 0;
+        margin-left: -20px;
+        margin-top: -60px;
+      }
+      .owl-next {
+        right: 0;
+        top: 50%;
+        margin-right: -20px;
+        margin-top: -60px;
+      }
+    }
+}
+
+

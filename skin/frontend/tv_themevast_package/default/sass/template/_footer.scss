@@ -1,0 +1,320 @@
+
+/* Footer ==================================================*/ 
+
+.footer-static-block {
+  background: #f7f7f7;
+  padding: 25px 0;
+  .box .fa {
+    float: left;
+    margin-right: 25px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border: $main-border;
+    color: $text-color;
+    font-size: 20px;
+  }
+  .box4 .fa:before {
+    margin-left: 3px;
+  }
+  .box {
+    &:hover .fa {
+      border-color: #333;
+      background: #333;
+      color: #fff;
+    }
+    .title {
+      padding-top: 15px;
+      font-weight: bold;
+      color: $text-color;
+      font-size: 14px;
+    }
+  }
+}
+
+/* ------------------------ */
+
+footer {
+  border-top: 1px solid #f0f0f0;
+  background: #f9f9f9;
+}
+.footer-information {
+  padding: 27px 0;
+  color: #ccc;
+  font-weight: normal;
+  .f-col {
+    width: 20%;
+    float: left;
+  }
+}
+
+.footer-static-title h3 {
+  color: #222;
+  font-family: $font-custom;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 16px;
+  position: relative;
+}
+
+.footer-static-content {
+  .box-img {
+    margin: 15px 0;
+  }
+  p {
+    line-height: 21px;
+    color: #888;
+  }
+  .logo-footer {
+    margin: 0 0 20px;
+  }
+  ul li {
+    &:before {
+      font-family: FontAwesome;
+      content: "\f0da";
+      font-size: 12px;
+      margin-right: 10px;
+      color: #555;
+    }
+  a {
+    line-height: 28px;
+    text-decoration: none;
+    display: inline;
+    color: #555;
+    font-size: 14px;
+    &:hover {
+      color: $main-color;
+      text-decoration: underline;
+    }
+    
+  }
+}
+  .des a {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+}
+
+/* -------------------------------------------- */
+
+.footer-newsletter {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.form-subscribe-header {
+  label {
+    color: #888;
+    font-size: 13px;
+    margin: 8px 0 10px;
+  }
+  .fa {
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+/* Footer ================================================================================ */
+
+.footer-container {
+  clear: both;
+  padding: 0;
+  background: #191919;
+  border-top:2px solid #de2727;
+  padding-top: 12px;
+}
+
+.footer {
+  border-top: 1px solid #242424;
+      padding: 20px 0;
+  .store-switcher {
+    display: inline;
+    margin: 0 5px 0 0;
+    color: #fff;
+    label {
+      font-weight: bold;
+      vertical-align: middle;
+    }
+    select {
+      padding: 0;
+      vertical-align: middle;
+    }
+  }
+  a {
+    color: #888;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .bugs {
+    margin: 13px 0 0;
+    color: #ecf3f6;
+    a {
+      color: #ecf3f6;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  address {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    color: #888;
+    line-height: 35px;
+    a {
+      color: $main-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  ul {
+    display: inline;
+    margin: 8px 0 0;
+    &.links {
+      display: block;
+      li {
+        display: inline;
+        margin: 0px 3px;
+        border-right: 1px solid #444444;
+        padding-right: 7px;
+        &.first {
+          margin-left: 0;
+        }
+        &.last {
+          background: none !important;
+          padding-right: 0 !important;
+          border: none;
+        }
+        &.login-register {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.footer-container .bottom-container {
+  margin: 0 0 5px;
+}
+
+.social {
+  text-align: right;
+  float: right;
+  li {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 3px;
+  }
+  a {
+    display: inline-block;
+    margin: 0 0 10px 0;
+  }
+}
+
+.f-row2 .footer-static-content {
+  h3 {
+    font-size: 14px;
+    color: $main-color;
+  }
+  .store1 {
+    margin-bottom: 15px;
+  }
+  p {
+    margin: 0;
+    .fa {
+      margin-right: 5px;
+      color: #aaa;
+    }
+  }
+}
+
+/*Twitter*/
+
+#twitter-feed {
+  margin-bottom: 1.5em;
+}
+
+.tweet-title {
+  display: none;
+  h3 {}
+}
+
+#loading-container {
+  text-align: center;
+}
+
+.tweet-content {}
+
+.twitter-article {
+  padding: 10px 0;
+}
+
+#twitter-feed .fa {
+  font-size: 30px;
+  color: #aaa;
+}
+
+.twitter-article a:hover {}
+
+.twitter-pic {
+  float: left;
+}
+
+.twitter-text {
+  margin: 0 0 0 52px;
+}
+
+.tweetprofilelink strong a {
+  color: $main-color;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.tweet-time {}
+
+.tweetprofilelink a, .tweet-time a {
+  color: #999;
+  text-decoration: none;
+}
+
+.tweetprofilelink a:hover, .tweet-time a:hover {
+  text-decoration: underline;
+}
+
+/* ======================================================================================= */
+
+/*Back to Top*/
+
+#back-top {
+  bottom: 135px;
+  display: none;
+  height: 40px;
+  position: fixed;
+  right: 0;
+  width: 40px;
+  z-index: 999;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 38px;
+  background-color: $main-color;
+  color: #fff;
+  &:hover {
+    background: #666;
+  }
+}

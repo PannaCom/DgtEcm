@@ -1,0 +1,138 @@
+.form-search {
+  width: 100%;
+  float: left;
+  background: #fff;
+  position: relative;
+  z-index: 999;
+  margin: 0;
+  border:2px solid #555555;
+  label {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+  }
+  ul li { 
+    cursor: pointer;
+    label { font-size: 12px; }
+    &:hover { background: #eee; @extend .transition; }
+   }
+  #cat {
+    float: left;
+    width: auto;
+  }
+  .dd-select {
+    background: none !important;
+    border: none;
+    padding-left: 15px;
+  }
+  .dd-selected {
+    background: none;
+    border: none;
+    text-align: left;
+    box-shadow: none;
+    font-weight: normal;
+    color: #777777;
+    line-height: 25px;
+    height: 25px;
+    padding:0;
+    margin: 5px 0;
+    border-right: 1px solid #d9d9d9;
+    padding-right: 20px;
+  }
+  input.input-text {
+    width:60%;
+    border: none;
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    line-height: 35px;
+    padding: 0;
+    margin-left: 30px;
+  }
+  button.button {
+    max-height: 39px;
+overflow: hidden;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    margin: 0;
+    span span {
+        background: $main-color;
+        border: none;
+        font-size: 17px;
+        color: #fff;
+        padding: 6px 14px 3px;
+        line-height: 30px;
+        @include transition(0.4s);
+      span { padding:0; }
+    }
+    &:hover {
+      span span {
+        color: $white;
+        background: #333;
+      }
+    }
+  }
+  .dd-pointer {
+    right: 18px;
+    color: #333;
+    border: solid 4px transparent;
+  }
+  #cat {
+    .dd-options {
+      border: 1px solid #eee;
+      box-shadow: none;
+      overflow: auto !important;
+      width: 143px !important;
+      margin-left: 0px;
+    }
+    a.dd-option {
+      padding: 5px 10px;
+      background: none;
+      border-bottom: 1px solid #eee;
+      color: #777;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+  .dd-pointer-down {
+    border-top: solid 4px #ccc !important;
+    &.dd-pointer-up {
+      border-bottom: solid 4px #ccc !important;
+      border-top: none !important;
+      margin-top: -4px;
+    }
+  }
+  #cat a.dd-option label {
+    font-weight: normal;
+  }
+  .search-autocomplete {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    ul li {
+      padding-left: 5px;
+      cursor: default;
+      &.selected {
+        background: #eee;
+      }
+    }
+  }
+}
+.search-keyword {
+  a {
+    color: #555;
+    font-weight: 500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .title {
+    font-weight: bold;
+  }
+}
