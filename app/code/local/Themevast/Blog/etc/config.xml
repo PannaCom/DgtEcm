@@ -223,7 +223,7 @@
                 <showtime>1</showtime>
                 <showshortcontent>1</showshortcontent>
                 <showreadmore>1</showreadmore>
-                <stopOnHover>0</stopOnHover>
+                <stopOnHover>1</stopOnHover>
             </slide>
             <comments>
                 <page_count>10</page_count>
