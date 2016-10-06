@@ -194,6 +194,17 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                            
                         </slide>
+                        <stopOnHover translate="label comment">
+                            <label>Pause:</label>
+                            <depends><slide>1</slide></depends>
+                            <frontend_type>select</frontend_type>
+                            <!-- <validate>required-entry validate-greater-than-zero</validate> -->
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </stopOnHover>
                         <row translate="label">
                             <label>Number of rows</label>
                             <frontend_type>text</frontend_type>

@@ -35,8 +35,8 @@
     $_productCollection=$this->getLoadedProductCollection();
     $_helper = $this->helper('catalog/output');
     $helpLabels = $this->helper('themevast/labels');
-    $widthImage = $widthImage;
-    $heightImage = $heightImage;
+    $widthImage = 50;
+    $heightImage = 50;
     $rows        = $this->getRow();
     $price          = $this->getShowPrice()?$this->getShowPrice():$this->getConfig('price');
     $cart           = $this->getShowButton()?$this->getShowButton():$this->getConfig('cart');

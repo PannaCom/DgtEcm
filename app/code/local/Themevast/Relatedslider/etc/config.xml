@@ -33,7 +33,7 @@
 				</args>
 			</relatedslider>
         </routers>
-    </admin>  
+    </admin>
     <global>
         <blocks>
             <relatedslider>
@@ -57,7 +57,7 @@
                 <slideSpeed>600</slideSpeed>
                 <stopOnHover>1</stopOnHover>
                 <rows>1</rows>
-                <loop>1</loop>   
+                <loop>1</loop>
                 <responsive>0:{items:1},600:{items:3},1000:{items:4}</responsive>
                 <margin>30</margin>
 			    <price>1</price>
