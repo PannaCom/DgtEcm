@@ -70,9 +70,9 @@
                         <p class="email-friend"><a class="email-friend-a" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>" title="<?php echo $this->__('Email to a Friend') ?>"><i class="fa fa-envelope"></i><?php //echo $this->__('Email to a Friend') ?></a></p>
                     <?php endif; ?>
                 </div>
-                <div class="addthis_native_toolbox"></div>
-                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-549fdf445bd3a1b9" async="async"></script>
-                <?php if (!$this->hasOptions()):?>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57fbda9a3adc3eec" async="async"></script>
+                <div class="addthis_inline_share_toolbox addthis_native_toolbox"></div>
+                    <?php if (!$this->hasOptions()):?>
                     <div class="add-to-box-cart">
                         <?php if($_product->isSaleable()): ?>
                             <?php echo $this->getChildHtml('addtocart') ?>
