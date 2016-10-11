@@ -5,7 +5,7 @@
                 <?php $_cartQty = $this->getSummaryCount() ?>
                 <div class="cart-mini-title">
                     <a class="shopping-cart" href="<?php echo Mage::helper('checkout/cart')->getCartUrl(); ?>">
-                    <span class="cart-title">My Cart</span>
+                    <span class="cart-title"><?php echo $this->__('My Cart');?></span>
                    <span class="cart-qty"><?php if($_cartQty<1) { echo $this->__('0'); } else { echo $_cartQty; } ?> item(s)-<?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?></span>
                     </a>
                 </div>

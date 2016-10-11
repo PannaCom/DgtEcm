@@ -104,12 +104,12 @@
                                 
                             </div>
                             <div class="my_account">
-                                <h3>My Account</h3>
+                                <h3><?php echo $this->__('My Account');?></h3>
                                 <?php   $helper = Mage::helper("customer"); // gets Mage_Customer_Helper_Data
                                 $registerurl = $helper->getRegisterUrl();
                                 $loginurl = $helper->getLoginUrl();
                                  ?>
-                                <a href="<?php echo $loginurl; ?> ">login</a>/<a href="<?php echo $registerurl; ?>">register</a>
+                                <a href="<?php echo $loginurl; ?> "><?php echo $this->__('Login');?></a>/<a href="<?php echo $registerurl; ?>"><?php echo $this->__('Register');?></a>
                             </div>
                         </div>
                         </div>

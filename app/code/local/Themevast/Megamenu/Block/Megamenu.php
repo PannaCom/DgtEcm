@@ -28,7 +28,7 @@ class Themevast_Megamenu_Block_Megamenu extends Mage_Catalog_Block_Navigation
 
             $html .= '<div id="megamenu_home" class="megamenu' . $active . '">';
                 $html .= '<div class="level-top">';
-                $html .= '<a href="'.Mage::helper('core/url')->getHomeUrl().'"><span class="home">Home</span></a>';
+                $html .= '<a href="'.Mage::helper('core/url')->getHomeUrl().'"><span class="home">'.Mage::helper('core')->__('Home').'</span></a>';
                 $html .= '</div>';
             $html .= '</div>';
         } 
