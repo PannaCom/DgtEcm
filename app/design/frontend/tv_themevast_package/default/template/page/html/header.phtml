@@ -105,11 +105,22 @@
                             </div>
                             <div class="my_account">
                                 <h3><?php echo $this->__('My Account');?></h3>
-                                <?php   $helper = Mage::helper("customer"); // gets Mage_Customer_Helper_Data
+                                <?php
+                                /** @var Mage_Customer_Helper_Data $helper */
+                                $helper = Mage::helper("customer"); // gets Mage_Customer_Helper_Data
                                 $registerurl = $helper->getRegisterUrl();
                                 $loginurl = $helper->getLoginUrl();
-                                 ?>
+                                $logoutUrl = $helper->getLogoutUrl();
+                                if(!Mage::getSingleton('customer/session')->isLoggedIn()):
+                                ?>
                                 <a href="<?php echo $loginurl; ?> "><?php echo $this->__('Login');?></a>/<a href="<?php echo $registerurl; ?>"><?php echo $this->__('Register');?></a>
+                                <?php
+                                else:
+                                ?>
+                                    <a href="<?php echo $this->getUrl('customer/account'); ?> "><?php echo $this->__('Thông tin');?></a> | <a href="<?php echo $logoutUrl; ?> "><?php echo $this->__('Logout');?></a>
+                                <?php
+                                endif;
+                                ?>
                             </div>
                         </div>
                         </div>
