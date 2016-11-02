@@ -59,9 +59,9 @@ Default layout, loads most of the pages
     <cms_index_index translate="label">
         <label>CMS Home Page</label>
         <reference name="left">
-            <block type="saleproduct/saleproduct" name="saleproduct" before="-"  template="themevast/saleproduct/saleproduct.phtml">
-                <action method="setData"><name>limit</name><value>3</value></action>
-            </block>
+            <!--<block type="saleproduct/saleproduct" name="saleproduct" before="-"  template="themevast/saleproduct/saleproduct.phtml">-->
+                <!--<action method="setData"><name>limit</name><value>3</value></action>-->
+            <!--</block>-->
             <block type="producttabs/producttabs" name="producttabs" template="themevast/producttabs/producttabs.phtml" /> 
             <block type="page/html" name="banner.left" after="producttabs" template="themevast/banner_left.phtml"/>
             <block type="blog/side" name="blog.slider" after="banner.left" template="themevast/blog/blog_slider.phtml"/>
