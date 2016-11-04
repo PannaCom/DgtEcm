@@ -50,7 +50,7 @@
 		<relatedslider>
 			<general>
 			    <enabled>1</enabled>
-			    <title>Related Productst</title>
+			    <title>Related Products</title>
                 <autoPlay>0</autoPlay>
                 <navigation>1</navigation>
                 <pagination>0</pagination>
