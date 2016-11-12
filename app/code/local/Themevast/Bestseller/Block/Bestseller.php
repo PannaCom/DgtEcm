@@ -41,8 +41,8 @@ class Themevast_Bestseller_Block_Bestseller extends Mage_Catalog_Block_Product_A
                         ->addAttributeToFilter('entity_id', array('in' => $maxQty))
 						->addStoreFilter($storeId);;
 
-        Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($collection);
-        Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($collection);
+        //Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($collection);
+        //Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($collection);
         
         $collection->setPageSize($this->getConfig('qty'))->setCurPage(1);
         Mage::getModel('review/review')->appendSummary($collection);     
