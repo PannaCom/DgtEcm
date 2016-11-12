@@ -11,13 +11,13 @@
         </reference>
     </default>
     <catalog_product_view translate="label">		
-		<reference name="left">
-			<block type="catalog/product_list_related" name="themevast.relatedslider" as="related_slider" before="-" template="themevast/relatedslider/relatedslider.phtml"/>
+		<reference name="content">
+			<block type="catalog/product_list_related" name="themevast.relatedslider" as="related_slider" after="-" template="themevast/relatedslider/relatedslider.phtml"/>
 		</reference>
     </catalog_product_view>
     <review_product_list translate="label">		
-		<reference name="left">
-			<block type="catalog/product_list_related" name="themevast.relatedslider" as="related_slider" before="-" template="themevast/relatedslider/relatedslider.phtml"/>
+		<reference name="content">
+			<block type="catalog/product_list_related" name="themevast.relatedslider" as="related_slider" after="-" template="themevast/relatedslider/relatedslider.phtml"/>
 		</reference>
     </review_product_list>
 </layout> 
