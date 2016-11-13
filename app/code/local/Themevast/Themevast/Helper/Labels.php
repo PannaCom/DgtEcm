@@ -1,11 +1,11 @@
 <?php
 class Themevast_Themevast_Helper_Labels extends Mage_Core_Helper_Abstract
-{	
+{
 	protected $newcfg;
 	protected $salecfg;
 	protected $percent;
 	protected $connect = false;
-	public function getLabels($product)
+	public function getLabels($product, $detail_product = false)
 	{
 		$html  = '';
 		if(!$this->connect){
@@ -22,19 +22,27 @@ class Themevast_Themevast_Helper_Labels extends Mage_Core_Helper_Abstract
 			$finalPrice = $product->getFinalPrice();
 			$label = $this->percent ? floor(($finalPrice/$price)*100 - 100).' %' : $this->__('Sale');
 
-			$html .= '<span class="label-sale">' . $label . '</span>';
+			if($detail_product) {
+				$html .= '<span class="label-sale" style="position: relative; margin-bottom: 30px;">' . $label . '</span>';
+			} else {
+				$html .= '<span class="label-sale">' . $label . '</span>';
+			}
 		}
 		elseif($isNew){
-			$html .= '<span class="label-new">' . $this->__('New') . '</span>';			
+			$html .= '<span class="label-new">' . $this->__('New') . '</span>';
 		}
 		elseif($isSale){
 			$price = $product->getPrice();
 			$finalPrice = $product->getFinalPrice();
 			$label = $this->percent ? floor(($finalPrice/$price)*100 - 100).' %' : $this->__('Sale');
 
-			$html .= '<span class="label-sale">' . $label . '</span>';
+			if($detail_product) {
+				$html .= '<span class="label-sale" style="position: relative; margin-bottom: 30px;">' . $label . '</span>';
+			} else {
+				$html .= '<span class="label-sale">' . $label . '</span>';
+			}
 		}
-		
+
 		return $html;
 	}
 
@@ -47,13 +55,13 @@ class Themevast_Themevast_Helper_Labels extends Mage_Core_Helper_Abstract
 	{
 		$specialPrice = number_format($product->getFinalPrice(), 2);
 		$regularPrice = number_format($product->getPrice(), 2);
-		
+
 		if ($specialPrice != $regularPrice)
 			return $this->_nowIsBetween($product->getData('special_from_date'), $product->getData('special_to_date'));
 		else
 			return false;
 	}
-	
+
 	protected function _nowIsBetween($fromDate, $toDate)
 	{
 		if ($fromDate)
@@ -61,7 +69,7 @@ class Themevast_Themevast_Helper_Labels extends Mage_Core_Helper_Abstract
 			$fromDate = strtotime($fromDate);
 			$toDate = strtotime($toDate);
 			$now = strtotime(date("Y-m-d H:i:s"));
-			
+
 			if ($toDate)
 			{
 				if ($fromDate <= $now && $now <= $toDate)
@@ -73,7 +81,7 @@ class Themevast_Themevast_Helper_Labels extends Mage_Core_Helper_Abstract
 					return true;
 			}
 		}
-		
+
 		return false;
 	}
 }

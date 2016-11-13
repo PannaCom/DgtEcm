@@ -32,6 +32,7 @@
  */
 ?>
 <?php $_helper = $this->helper('catalog/output'); ?>
+<?php $helpLabels = $this->helper('themevast/labels'); ?>
 <?php $_product = $this->getProduct(); ?>
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
@@ -42,9 +43,9 @@
     <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
         <div class="row">
             <div class="product-img-box col-sm-12 col-md-5 col-sms-12 col-smb-12">
-                <?php echo $this->getChildHtml('media') ?>     
+                <?php echo $this->getChildHtml('media') ?>
             </div>
-            
+
             <div class="col-sm-12 col-md-7 col-sms-12 col-smb-12">
                 <div class="product-shop">
                 <div class="product-name">
@@ -53,17 +54,19 @@
                 <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
                 <?php echo $this->getChildHtml('product_type_data') ?>
 
+                <?php echo $helpLabels->getLabels($_product,true); //Product labels ?>
+
                 <?php if ($_product->getShortDescription()):?>
                     <div class="short-description">
                         <!--<h2><?php echo $this->__('Quick Overview') ?></h2>-->
                         <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                     </div>
                 <?php endif;?>
-         
+
                 <?php echo $this->getTierPriceHtml() ?>
                 <?php echo $this->getChildHtml('alert_urls') ?>
                 <?php echo $this->getChildHtml('extrahint') ?>
-                
+
                 <div class="add-to-box">
                     <?php echo $this->getChildHtml('addto') ?>
                     <?php if ($this->canEmailToFriend()): ?>
@@ -79,23 +82,23 @@
                         <?php endif; ?>
                         <?php //echo $this->getChildHtml('addto') ?>
                     </div>
-                    <?php echo $this->getChildHtml('extra_buttons') ?>     
+                    <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php elseif (!$_product->isSaleable()): ?>
-                
-                
+
+
                 <?php endif; ?>
-    
+
                 <?php echo $this->getChildHtml('other');?>
-    
+
                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                     <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                 <?php endif;?>
-                
+
                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                    <?php echo $this->getChildChildHtml('container2', '', true, true) ?>         
+                    <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
                 <?php endif;?>
-                
-             </div>   
+
+             </div>
             </div>
         </div>
         <div class="clearer"></div>
@@ -155,10 +158,10 @@
         }.bind(productAddToCartForm);
     //]]>
     </script>
-    
+
 
     </div>
-    
+
     <div class="product-collateral row-fluid">
         <?php echo $this->getChildHtml('info_tabs') ?>
         <?php echo $this->getChildHtml('upsell_products') ?>
