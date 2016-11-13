@@ -1,4 +1,4 @@
-/* 
+/*
 Version: 1.0
 Author: Themevast
  */
@@ -9460,10 +9460,13 @@ p.welcome-msg a:hover {
   background: #fff;
   border: 1px solid #ebebeb;
 }
+/* Change display */
 
-#product_tabs_description_contents h2 {
-  display: none;
-}
+/*#product_tabs_description_contents h2 {*/
+  /*display: none;*/
+/*}*/
+
+/* End */
 
 .box-reviews {
   background: #fff;
