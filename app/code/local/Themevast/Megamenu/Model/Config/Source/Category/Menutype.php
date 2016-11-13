@@ -7,6 +7,7 @@ class Themevast_Megamenu_Model_Config_Source_Category_Menutype extends Mage_Eav_
             array('value'=>'0', 'label'=>Mage::helper('adminhtml')->__('Default')),
             array('value'=>'1', 'label'=>Mage::helper('adminhtml')->__('Full')),
             array('value'=>'2', 'label'=>Mage::helper('adminhtml')->__('Grid')),
+            array('value'=>'-1', 'label'=>Mage::helper('adminhtml')->__('No')),
         );
     }
 }

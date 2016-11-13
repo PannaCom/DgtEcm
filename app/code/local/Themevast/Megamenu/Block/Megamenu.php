@@ -380,7 +380,6 @@ class Themevast_Megamenu_Block_Megamenu extends Mage_Catalog_Block_Navigation
         
         $catType  = Mage::getModel("catalog/category")->load($category->getId())->getCatMenutype();
         $blockrightpos = Mage::getModel("catalog/category")->load($category->getId())->getCatBlockPos();
-        
         if($catType == 0) return $this->_renderTopCategoryMenuItemHtml(
                 $category,
                 0,
@@ -401,7 +400,8 @@ class Themevast_Megamenu_Block_Megamenu extends Mage_Catalog_Block_Navigation
 
         // --- Sub Categories ---
         $activeChildren = $this->getActiveChildren($category, $level);
-
+        if ($catType == -1)
+            $activeChildren = array();
         // --- class for active category ---
         $active = ($this->isCategoryActive($category)) ? ' act' : '';
 
