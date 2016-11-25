@@ -9073,6 +9073,10 @@ p.welcome-msg a:hover {
   margin: 10px 0;
 }
 
+.product-view .product-shop .short-description .std br {
+  display: none;
+}
+
 .product-view .product-shop .price-box {
   margin: 10px 0 0 0;
 }
