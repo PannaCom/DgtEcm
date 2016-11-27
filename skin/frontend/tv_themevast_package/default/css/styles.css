@@ -9070,11 +9070,17 @@ p.welcome-msg a:hover {
 }
 
 .product-view .product-shop .short-description {
+  text-align: justify;
   margin: 10px 0;
+  line-height:1.8;
+}
+
+.product-view .product-tabs-content .std {
+  text-align: justify;
 }
 
 .product-view .product-shop .short-description .std br {
-  display: none;
+  /*display: none;*/
 }
 
 .product-view .product-shop .price-box {
