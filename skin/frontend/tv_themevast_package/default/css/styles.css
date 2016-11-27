@@ -9164,6 +9164,7 @@ p.welcome-msg a:hover {
 .product-view .add-to-cart .input-content {
   float: left;
   margin-right: 15px;
+  margin-top:25px;
 }
 
 .product-view .add-to-cart .box-qty {
